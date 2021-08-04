@@ -15,15 +15,15 @@ import com.example.form.UserForm;
 @Controller
 @RequestMapping("/exam04")
 public class Exam04Controller {
-	
-	@RequestMapping("")
-	public String index(Model model) {
-		return "exam04";
-	}
-	
+
 	@ModelAttribute
 	public UserForm setUpForm() {
 		return new UserForm();
+	}
+
+	@RequestMapping("")
+	public String index(Model model) {
+		return "exam04";
 	}
 	
 	@RequestMapping("/receive-info")
