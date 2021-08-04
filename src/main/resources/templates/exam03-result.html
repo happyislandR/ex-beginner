@@ -2,13 +2,13 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>exam03-result</title>
 </head>
 <body>
 <h1>合計金額</h1>
 ■税抜き価格<br>
-<span th:text="${#numbers.formatInteger(application.withoutTax, 1, 'COMMA')}">dummy</span>円<br>
+<span th:text="${#numbers.formatInteger(application.TotalPrice, 1, 'COMMA')}">dummy</span>円<br>
 ■税込み価格<br>
-<span th:text="${#numbers.formatInteger(application.withTax, 1, 'COMMA')}">dummy</span>円<br>
+<span th:text="${#numbers.formatInteger(application.TotalPriceWithTax, 1, 'COMMA')}">dummy</span>円<br>
 </body>
 </html>

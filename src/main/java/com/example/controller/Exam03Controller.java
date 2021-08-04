@@ -19,13 +19,12 @@ public class Exam03Controller {
 	}
 	
 	@RequestMapping("/receive-info")
-	public String receiveInfo(String product1, String product2, String product3) {
-		System.out.println("aaa");
-		int withoutTax = Integer.parseInt(product1) + Integer.parseInt(product2) + Integer.parseInt(product3);
-		int withTax = (int)(withoutTax * 1.1);
+	public String receiveInfo(String price1, String price2, String price3) {
+		int TotalPrice = Integer.parseInt(price1) + Integer.parseInt(price2) + Integer.parseInt(price3);
+		int TotalPriceWithTax = (int)(TotalPrice * 1.1);
 		
-		application.setAttribute("withoutTax", withoutTax);
-		application.setAttribute("withTax", withTax);
+		application.setAttribute("TotalPrice", TotalPrice);
+		application.setAttribute("TotalPriceWithTax", TotalPriceWithTax);
 		return "exam03-result";
 	}
 }
